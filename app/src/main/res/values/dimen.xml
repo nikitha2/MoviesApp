@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="padding">8dp</dimen>
+    <dimen name="imageHeight">200dp</dimen>
+    <dimen name="textsize">23sp</dimen>
+
+</resources>

@@ -1,0 +1,20 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="details" parent="TextAppearance.AppCompat.Display1">
+        <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/dancingscript_medium</item>
+        <item name="android:textSize">@dimen/textsize</item>
+    </style>
+
+    <style name="detailstitles" parent="TextAppearance.AppCompat.Display3">
+        <!-- Customize your theme here. -->
+        <item name="android:textSize">@dimen/textsize</item>
+        <item name="android:font">@font/dancingscript_medium</item>
+    </style>
+</resources>

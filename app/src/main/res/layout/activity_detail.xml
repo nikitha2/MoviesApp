@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/imageHeight"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="@dimen/padding"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/title_tv"
+        style="@style/details"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding"
+        android:text="@string/title"
+        android:textStyle="bold"
+        app:layout_constraintRight_toLeftOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView1"
+        app:layout_constraintBottom_toTopOf="@id/overview_tv"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/details"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding"
+        android:text="@string/title"
+        app:layout_constraintBottom_toTopOf="@+id/overview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/title_tv"
+        app:layout_constraintTop_toBottomOf="@+id/imageView1"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <TextView
+    android:id="@+id/overview_tv"
+    style="@style/details"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding"
+    android:text="@string/overview"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/title_tv"
+    app:layout_constraintRight_toLeftOf="@+id/overview"
+    app:layout_constraintWidth_percent="0.3"
+    app:layout_constraintBottom_toTopOf="@+id/userrating_tv"/>
+
+    <TextView
+        android:id="@+id/overview"
+        style="@style/details"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding"
+        android:text="@string/overview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/userrating"
+        app:layout_constraintLeft_toRightOf="@+id/overview_tv"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintWidth_percent="0.7" />
+
+
+    <TextView
+        android:id="@+id/userrating_tv"
+        style="@style/details"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding"
+        android:text="@string/userrating"
+        android:textStyle="bold"
+        app:layout_constraintRight_toLeftOf="@+id/userrating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/overview_tv"
+        app:layout_constraintBottom_toTopOf="@id/releasedate_tv"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <TextView
+        android:id="@+id/userrating"
+        style="@style/details"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding"
+        android:text="@string/userrating"
+        app:layout_constraintBottom_toTopOf="@+id/releasedate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/userrating_tv"
+        app:layout_constraintTop_toBottomOf="@+id/overview"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <TextView
+        android:id="@+id/releasedate_tv"
+        style="@style/details"
+        android:layout_width="0dp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding"
+        android:text="@string/releasedate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/overview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userrating_tv"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <TextView
+        android:id="@+id/releasedate"
+        style="@style/details"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding"
+        android:text="@string/releasedate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/releasedate_tv"
+        app:layout_constraintTop_toBottomOf="@+id/userrating"
+        app:layout_constraintWidth_percent="0.7" />
+</androidx.constraintlayout.widget.ConstraintLayout>
