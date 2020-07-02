@@ -73,10 +73,7 @@ public class DetailActivity extends AppCompatActivity implements AdaptorReviewRe
 
             isfavorite=populateFavoritesymbol(viewModel,movieid);
             finalDataFav=new MoviesFavoriteDataEntity(data.getPopularity(),data.getVote_count(), data.getPoster_path(),movieid, data.getBackdrop_path(), data.getOriginal_language(), data.getOriginal_title(), data.getTitle(), data.getVote_average(), data.getOverview(), data.getRelease_date(),isfavorite);
-
-            // populateData(data);
-
-        } else if (filter.equals(getResources().getString(R.string.top_rated))) {
+       } else if (filter.equals(getResources().getString(R.string.top_rated))) {
             MoviesByTopRatedEntity data = (MoviesByTopRatedEntity) intent.getSerializableExtra("valueAtPosition");
             getSupportActionBar().setTitle(data.getTitle());
             movieid = data.getId();
@@ -92,7 +89,6 @@ public class DetailActivity extends AppCompatActivity implements AdaptorReviewRe
 
             isfavorite=populateFavoritesymbol(viewModel,movieid);
             finalDataFav=new MoviesFavoriteDataEntity(data.getPopularity(),data.getVote_count(), data.getPoster_path(),movieid, data.getBackdrop_path(), data.getOriginal_language(), data.getOriginal_title(), data.getTitle(), data.getVote_average(), data.getOverview(), data.getRelease_date(),isfavorite);
-
         }
         else if (filter.equals(getResources().getString(R.string.fav))) {
             MoviesFavoriteDataEntity data = (MoviesFavoriteDataEntity) intent.getSerializableExtra("valueAtPosition");
@@ -125,9 +121,9 @@ public class DetailActivity extends AppCompatActivity implements AdaptorReviewRe
                else{
                    finalDataFav.setIsfavorite(true);
                    Long d1= viewModel.insertMovieInMoviesByFavoriteTable(finalDataFav);
-                   while(d1 == -1){
+                   /*while(d1 == -1){
                        d1= viewModel.insertMovieInMoviesByFavoriteTable(finalDataFav);
-                   }
+                   }*/
                    Log.i(LOG_TAG,"------------------d1--------------"+d1.toString());
                }
             }
