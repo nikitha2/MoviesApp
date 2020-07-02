@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 import com.jakewharton.picasso.OkHttp3Downloader;
 import com.nikitha.android.movies.Room.MoviesDataEntity;
+import com.nikitha.android.movies.Room.MoviesFavoriteDataEntity;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -17,12 +18,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import static com.nikitha.android.movies.Utils.NetworkUtils.buildImageURL;
 
-public class MoviesByPopularityAdapter extends RecyclerView.Adapter {
-    List<MoviesDataEntity> moviesByPopularity;
+public class MoviesByFavoriteAdapter extends RecyclerView.Adapter {
+    List<MoviesFavoriteDataEntity> moviesByPopularity;
     Context context;
     ListItemClickListener mClickListener;
 
-    public MoviesByPopularityAdapter(Context context, List<MoviesDataEntity> moviesByPopularity, ListItemClickListener mClickListener) {
+    public MoviesByFavoriteAdapter(Context context, List<MoviesFavoriteDataEntity> moviesByPopularity, ListItemClickListener mClickListener) {
         this.moviesByPopularity=moviesByPopularity;
         this.context=context;
         this.mClickListener=mClickListener;
@@ -58,20 +59,20 @@ public class MoviesByPopularityAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         View currentView = holder.itemView;
-        MoviesDataEntity currentItemAtPos = moviesByPopularity.get(position);
+        MoviesFavoriteDataEntity currentItemAtPos = moviesByPopularity.get(position);
 
         ImageView imageView= currentView.findViewById(R.id.imageView);
 
         Picasso.Builder builder = new Picasso.Builder(context);
         builder.downloader(new OkHttp3Downloader(context));
-         builder.build()
+        builder.build()
                 .load(buildImageURL(currentItemAtPos.getPoster_path()))
                 .placeholder((R.drawable.ic_launcher_foreground))
                 .error(R.drawable.ic_launcher_background)
                 .into(imageView);
     }
 
-    public void setData(List<MoviesDataEntity> data) {
+    public void setData(List<MoviesFavoriteDataEntity> data) {
         moviesByPopularity.clear();
         moviesByPopularity.addAll(data);
         notifyDataSetChanged();

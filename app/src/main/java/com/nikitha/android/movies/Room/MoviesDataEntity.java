@@ -1,15 +1,12 @@
 package com.nikitha.android.movies.Room;
 
-import com.google.gson.annotations.SerializedName;
-import com.nikitha.android.movies.Retrofit.MoviesVideosList;
-
 import java.io.Serializable;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "MoviesByTopRatedTable")
-public class MoviesByTopRatedEntity implements Serializable {
+@Entity(tableName = "MoviesByPopularityTable")
+public class MoviesDataEntity implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
     private int row_id;
@@ -27,7 +24,7 @@ public class MoviesByTopRatedEntity implements Serializable {
     private String overview;
     private String release_date;
 
-    public MoviesByTopRatedEntity(Double popularity, Integer vote_count, String poster_path, Integer id, boolean adult, String backdrop_path, String original_language, String original_title, String title, Double vote_average, String overview, String release_date) {
+    public MoviesDataEntity(Double popularity, Integer vote_count, String poster_path, Integer id, boolean adult, String backdrop_path, String original_language, String original_title, String title, Double vote_average, String overview, String release_date) {
         this.popularity = popularity;
         this.vote_count = vote_count;
         this.poster_path = poster_path;

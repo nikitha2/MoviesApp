@@ -1,8 +1,30 @@
 <resources>
     <string name="app_name">Movies</string>
+    <string name="noData">No Data for the catogery</string>
+
     <string name="title">Title:</string>
-    <string name="overview">Overview:</string>
+    <string name="overview">Overview: text here</string>
     <string name="userrating">User rating:</string>
     <string name="releasedate">Relase date:</string>
+    <string name="markasfav">Mark As Favorite</string>
+    <string name="reviews">Reviews</string>
+    <string name="trailer">Trailer</string>
+    <string name="author">author</string>
+    <string name="content">content of review</string>
+
+    <string name="settings_languageTitle">Language</string>
+    <string name="english">en</string>
+    <string name="sort">Sorted in order of : </string>
+
+    <string name="filter">Filters</string>
+    <string name="mostPopular">Most popular</string>
+    <string name="top_rated">Top rated</string>
+    <string name="fav">Favorites</string>
+
+    <string name="filters">Filters</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="trailerVideo">Official trailer</string>
+
 
 </resources>

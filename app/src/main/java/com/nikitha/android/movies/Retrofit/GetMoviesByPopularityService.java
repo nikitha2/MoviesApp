@@ -1,7 +1,12 @@
 package com.nikitha.android.movies.Retrofit;
 
+import com.nikitha.android.movies.Room.MovieReviewDataEntityList;
+import com.nikitha.android.movies.Room.MovieTrailersDataEntityList;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface GetMoviesByPopularityService {
@@ -16,4 +21,9 @@ public interface GetMoviesByPopularityService {
     @GET("/3/movie/top_rated")
     Call<MoviesByTopRatedList> getAllMoviesByTopRated(@Query("language") String language, @Query("api_key") String api_key);
 
+    @GET("/3/movie/{id}/videos")
+    Call<MovieTrailersDataEntityList> getMovieTrailersForMovieId(@Path("id") Integer id, @Query("api_key") String api_key);
+
+    @GET("/3/movie/{id}/reviews")
+    Call<MovieReviewDataEntityList> getMovieReviewsForMovieId(@Path("id") Integer id, @Query("api_key") String api_key);
 }

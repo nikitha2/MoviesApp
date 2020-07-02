@@ -26,11 +26,13 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation "com.android.support:cardview-v7:29.1.0"
     implementation 'com.android.support:recyclerview-v7:29.4.0'
+    implementation 'com.thoughtbot:expandablerecyclerview:1.0'
 
     implementation 'com.squareup.picasso:picasso:2.5.2'
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
@@ -49,4 +51,8 @@ dependencies {
     implementation "androidx.work:work-runtime:2.3.4"
     // optional - Test helpers
     androidTestImplementation "androidx.work:work-testing:2.3.4"
+
+    //SharedPreferences
+    implementation 'com.android.support:preference-v7:29.0.0'
+    implementation 'androidx.preference:preference:1.1.1'
 }

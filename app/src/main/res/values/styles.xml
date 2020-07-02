@@ -1,20 +1,50 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
     </style>
+
+
     <style name="details" parent="TextAppearance.AppCompat.Display1">
         <!-- Customize your theme here. -->
-        <item name="android:fontFamily">@font/dancingscript_medium</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textSize">@dimen/textsize</item>
+        <item name="android:layout_marginLeft">@dimen/padding2</item>
+        <item name="android:layout_marginRight">@dimen/padding2</item>
+        <item name="android:layout_marginBottom">@dimen/padding2</item>
+    </style>
+    <style name="margin">
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:layout_marginLeft">@dimen/padding2</item>
+        <item name="android:layout_marginRight">@dimen/padding2</item>
+        <item name="android:layout_marginBottom">@dimen/padding2</item>
+    </style>
+    <style name="marginLeftRight">
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:layout_marginLeft">@dimen/padding2</item>
+        <item name="android:layout_marginRight">@dimen/padding2</item>
     </style>
 
     <style name="detailstitles" parent="TextAppearance.AppCompat.Display3">
         <!-- Customize your theme here. -->
         <item name="android:textSize">@dimen/textsize</item>
-        <item name="android:font">@font/dancingscript_medium</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:autoSizeTextType">uniform</item>
     </style>
+    <style name="PreferenceScreen" parent="Preference">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/textsize</item>
+    </style>
+
+    <style name="detailsButton" parent="TextAppearance.MaterialComponents.Button">
+        <!-- Customize your theme here. -->
+        <item name="android:textSize">@dimen/textsizebutton</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="backgroundColor">@color/colorAccent1</item>
+    </style>
+
 </resources>

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.jakewharton.picasso.OkHttp3Downloader;
+import com.nikitha.android.movies.Room.MoviesByTopRatedEntity;
 import com.nikitha.android.movies.Room.MoviesDataEntity;
 import com.squareup.picasso.Picasso;
 
@@ -17,13 +18,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import static com.nikitha.android.movies.Utils.NetworkUtils.buildImageURL;
 
-public class MoviesByPopularityAdapter extends RecyclerView.Adapter {
-    List<MoviesDataEntity> moviesByPopularity;
+public class MoviesByTopRatedAdapter extends RecyclerView.Adapter {
+    List<MoviesByTopRatedEntity> moviesByTopRated;
     Context context;
-    ListItemClickListener mClickListener;
+    MoviesByPopularityAdapter.ListItemClickListener mClickListener;
 
-    public MoviesByPopularityAdapter(Context context, List<MoviesDataEntity> moviesByPopularity, ListItemClickListener mClickListener) {
-        this.moviesByPopularity=moviesByPopularity;
+    public MoviesByTopRatedAdapter(Context context, List<MoviesByTopRatedEntity> moviesByTopRated, MoviesByPopularityAdapter.ListItemClickListener mClickListener) {
+        this.moviesByTopRated =moviesByTopRated;
         this.context=context;
         this.mClickListener=mClickListener;
     }
@@ -58,7 +59,7 @@ public class MoviesByPopularityAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         View currentView = holder.itemView;
-        MoviesDataEntity currentItemAtPos = moviesByPopularity.get(position);
+        MoviesByTopRatedEntity currentItemAtPos = moviesByTopRated.get(position);
 
         ImageView imageView= currentView.findViewById(R.id.imageView);
 
@@ -71,15 +72,15 @@ public class MoviesByPopularityAdapter extends RecyclerView.Adapter {
                 .into(imageView);
     }
 
-    public void setData(List<MoviesDataEntity> data) {
-        moviesByPopularity.clear();
-        moviesByPopularity.addAll(data);
+    public void setData(List<MoviesByTopRatedEntity> data) {
+        moviesByTopRated.clear();
+        moviesByTopRated.addAll(data);
         notifyDataSetChanged();
     }
 
     @Override
     public int getItemCount() {
-        return moviesByPopularity.size();
+        return moviesByTopRated.size();
     }
 
 

@@ -1,6 +1,7 @@
 package com.nikitha.android.movies.Retrofit;
 
 import com.nikitha.android.movies.Room.MoviesByTopRatedEntity;
+import com.nikitha.android.movies.Room.MoviesDataEntity;
 
 import java.util.List;
 

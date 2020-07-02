@@ -3,12 +3,15 @@ package com.nikitha.android.movies.Room;
 import android.content.Context;
 import android.util.Log;
 
+import com.nikitha.android.movies.Retrofit.MovieReviewList;
+import com.nikitha.android.movies.Retrofit.MovieTrailersList;
+
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 
-@Database(entities = {MoviesByPopularityEntity.class, MoviesByTopRatedEntity.class}, version = 1, exportSchema = false)
+@Database(entities = {MoviesDataEntity.class, MoviesByTopRatedEntity.class, MovieReviewList.class, MovieTrailersList.class, MoviesFavoriteDataEntity.class}, version = 1, exportSchema = false)
 @TypeConverters(DateConverter.class)
 public abstract class AppDatabase extends RoomDatabase {
 

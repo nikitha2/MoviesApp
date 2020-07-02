@@ -1,22 +1,22 @@
 package com.nikitha.android.movies.Retrofit;
 
-import com.nikitha.android.movies.Room.MoviesByPopularityEntity;
+import com.nikitha.android.movies.Room.MoviesDataEntity;
 
 import java.util.List;
 
 public class MoviesByPopularityList {
 
-    List<MoviesByPopularityEntity> results;
+    List<MoviesDataEntity> results;
 
-    public MoviesByPopularityList(List<MoviesByPopularityEntity> results) {
+    public MoviesByPopularityList(List<MoviesDataEntity> results) {
         this.results = results;
     }
 
-    public List<MoviesByPopularityEntity> getResults() {
+    public List<MoviesDataEntity> getResults() {
         return results;
     }
 
-    public void setResults(List<MoviesByPopularityEntity> results) {
+    public void setResults(List<MoviesDataEntity> results) {
         this.results = results;
     }
 }

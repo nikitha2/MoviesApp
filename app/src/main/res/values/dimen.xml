@@ -2,7 +2,16 @@
 <resources>
 
     <dimen name="padding">8dp</dimen>
-    <dimen name="imageHeight">200dp</dimen>
-    <dimen name="textsize">23sp</dimen>
+    <dimen name="padding1">6dp</dimen>
+    <dimen name="padding2">16dp</dimen>
+    <dimen name="padding3">36dp</dimen>
 
+    <dimen name="imageHeight">300dp</dimen>
+    <dimen name="textsize">16sp</dimen>
+    <dimen name="PreferenceCategoryLeftMargin">50dp</dimen>
+    <dimen name="PreferenceCategoryTopMargin">25dp</dimen>
+    <dimen name="textsizebutton">10sp</dimen>
+
+    <dimen name="listHeight">44dp</dimen>
+    <dimen name="listHeight1">22dp</dimen>
 </resources>
