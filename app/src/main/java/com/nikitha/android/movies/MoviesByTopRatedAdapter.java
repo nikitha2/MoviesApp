@@ -69,6 +69,8 @@ public class MoviesByTopRatedAdapter extends RecyclerView.Adapter {
                 .load(buildImageURL(currentItemAtPos.getPoster_path()))
                 .placeholder((R.drawable.ic_launcher_foreground))
                 .error(R.drawable.ic_launcher_background)
+                 .fit()
+                 .centerCrop()
                 .into(imageView);
     }
 

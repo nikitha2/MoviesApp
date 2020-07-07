@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.jakewharton.picasso.OkHttp3Downloader;
 import com.nikitha.android.movies.Room.MoviesDataEntity;
 import com.squareup.picasso.Picasso;
@@ -64,9 +65,15 @@ public class MoviesByPopularityAdapter extends RecyclerView.Adapter {
 
         Picasso.Builder builder = new Picasso.Builder(context);
         builder.downloader(new OkHttp3Downloader(context));
-         builder.build()
+        /*builder.build()
                 .load(buildImageURL(currentItemAtPos.getPoster_path()))
                 .placeholder((R.drawable.ic_launcher_foreground))
+                .error(R.drawable.ic_launcher_background)
+                .into(imageView);*/
+
+        Glide.with(context)
+                .load(buildImageURL(currentItemAtPos.getPoster_path()))
+                .placeholder(R.drawable.ic_launcher_foreground)
                 .error(R.drawable.ic_launcher_background)
                 .into(imageView);
     }

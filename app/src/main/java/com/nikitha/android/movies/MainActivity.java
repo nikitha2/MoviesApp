@@ -10,9 +10,11 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,6 +31,8 @@ import com.nikitha.android.movies.arch.ViewModelMain;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.nikitha.android.movies.Utils.Commons.calculateNoOfColumns;
 
 public class MainActivity extends AppCompatActivity implements MoviesByPopularityAdapter.ListItemClickListener ,SharedPreferences.OnSharedPreferenceChangeListener, MoviesByFavoriteAdapter.ListItemClickListener {
     MoviesByPopularityAdapter moviesByPopularityAdapter;
@@ -82,7 +86,6 @@ public class MainActivity extends AppCompatActivity implements MoviesByPopularit
         PreferenceManager.getDefaultSharedPreferences(this).unregisterOnSharedPreferenceChangeListener(this);
     }
 
-
     private void setupViewModel() {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         language = sharedPreferences.getString(getString(R.string.settings_languageTitle), getResources().getString(R.string.english));
@@ -91,7 +94,8 @@ public class MainActivity extends AppCompatActivity implements MoviesByPopularit
         if(languageStringlengthGreaterThan2(language)){
             MainViewModelFactory factory = new MainViewModelFactory(this,language);
             final ViewModelMain viewModel = ViewModelProviders.of(this, factory).get(ViewModelMain.class);
-            recyclerView.setLayoutManager(new GridLayoutManager(this, numberOfColumns));
+
+            recyclerView.setLayoutManager(new GridLayoutManager(this, calculateNoOfColumns(this)));
 
             if(filters.equals(getResources().getString(R.string.mostPopular))){
              //   sortedorder.setText(getString(R.string.sort).concat(getString(R.string.mostPopular)));
