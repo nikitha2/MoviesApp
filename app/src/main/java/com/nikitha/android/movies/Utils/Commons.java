@@ -14,5 +14,4 @@ public class Commons {
             noOfColumns = 2;
         return noOfColumns;
     }
-
 }
